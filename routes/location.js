@@ -2,7 +2,7 @@ import { Router } from "express";
 
 const router = Router();
 
-const locationData = [];
+export const locationData = [];
 
 router.get("/", (req, res) => {
   res.status(200).send(locationData);
