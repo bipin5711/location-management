@@ -13,7 +13,7 @@ app.use(logger);
 
 app.use("/locations", locationRoute);
 
-app.use("/weather", weatherRoute);
+app.use(weatherRoute);
 
 app.listen(port, () => {
   console.log(`App is listening to Port: ${port}`);
