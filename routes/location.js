@@ -17,7 +17,7 @@ router.post("/", (req, res) => {
     return res.status(400).send("Please send name, latitude and longitude");
   }
   locationData.push({ name, lat, lng, id: locationData.length + 1 });
-  res.status(201).send('Location added successfully!');
+  res.status(201).send("Location added successfully!");
 });
 
 router.get("/:id", (req, res) => {
@@ -45,7 +45,7 @@ router.put("/:id", (req, res) => {
     lng,
   };
 
-  res.status(200).send('Location updated successfully!');
+  res.status(200).send("Location updated successfully!");
 });
 
 router.delete("/:id", (req, res) => {
@@ -55,7 +55,7 @@ router.delete("/:id", (req, res) => {
   if (locationIndex == -1) {
     return res.status(404).send(`Location with id ${id} not found`);
   }
-  locationData.splice(locationIndex,1);
+  locationData.splice(locationIndex, 1);
   res.status(200).send("Location deleted successfully!");
 });
 
